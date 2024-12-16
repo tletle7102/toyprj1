@@ -16,8 +16,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  // 데이터베이스 테이블의 식별자Identification
-    @Column(nullable = false)
-    private String username;  // 아이디
+    @Column(nullable = false, unique = true)
+    private String username;  // 사용자명
     @Column(nullable = false)
     private String realname;  // 실명
     @Column(nullable = false)
